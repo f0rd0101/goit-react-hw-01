@@ -2,29 +2,29 @@ import s from './Profile.module.css'
 
 const Profile = ({user}) => {
   return (
-  <div>
-<div>
+  <div className={s.wrapper}>
+<div className={s.secondwrapper}> 
 <img className={s.img}
 src= {user.avatar}
 alt="User avatar"
 />
-<p>{user.username}</p>
-<p>@{user.tag}</p>
-<p>{user.location}</p>
+<p className={s.username}>{user.username}</p>
+<p className={s.p}>@{user.tag}</p>
+<p className={s.p}>{user.location}</p>
 </div>
 
-<ul>
-<li>
+<ul className={s.ul}>
+<li className={s.li}>
 <span>Followers</span>
-<span>{user.stats.followers}</span>
+<span className={s.stats}>{user.stats.followers}</span>
 </li>
-<li>
+<li className={s.li} >
 <span>Views</span>
-<span>{user.stats.views}</span>
+<span className={s.stats}>{user.stats.views}</span>
 </li>
-<li>
+<li className={s.li}>
 <span>Likes</span>
-<span>{user.stats.likes}</span>
+<span className={s.stats}>{user.stats.likes}</span>
 </li>
 </ul>
 </div>
