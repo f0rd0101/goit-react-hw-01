@@ -1,7 +1,19 @@
 import './App.css'
-import userData from './Profile/userData.json'
+import Profile from './Profile/Profile'
+// import FriendList from './FriendList/FriendList'
+// import TransactionHistory from './TransactionHistory/TransactionHistory'
+import userData from './assets/userData.json'
 
-function App() {
+
+
+const App = () => {
+  return (
+    <div>
+    <Profile user ={userData}/>
+    {/* <FriendList/>
+    <TransactionHistory/> */}
+    </div>
+  )
 }
 
 export default App
