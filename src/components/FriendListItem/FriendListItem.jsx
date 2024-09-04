@@ -1,23 +1,13 @@
-import s from './FriendListItem.module.css'
-import clsx from 'clsx'
+import css from "../FriendListItem/FriendListItem.module.css";
 
-
-
-const FriendList = ({friends}) => {
-
+function FriendListItem({ friend }) {
   return (
-    <ul className={s.ulfriend}>
-       {friends.map((friend)=>{
-        return(
-          <li key ={friend.id} className={s.lifriend}>
-            <img src={friend.avatar} alt="avatar" width='48' />
-            <p>{friend.name}</p>
-            {friend.isOnline ? <p className={clsx(s.online,s.green)}>Online</p> : <p className={clsx(s.online,s.red)}>Offline</p>}
-          </li>
-        )
-       })}
-    </ul>
+    <div>
+      <img src={friend.avatar} alt={friend.name} width="48" />
+      <p>{friend.name}</p>
+      {friend.isOnline ? (<p className={css.online}>Online</p>) : (<p className={css.offline}>Offline</p>)}
+    </div>
   )
 }
 
-export default FriendList
+export default FriendListItem;

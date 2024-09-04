@@ -1,21 +1,7 @@
-.ulfriend{
-    display: flex;
-    margin: 0 auto;
-    justify-content: center;
-    list-style: none;
-    margin-top: 30px;
-    gap: 10px;
-}
-.lifriend{
-    border: 1px solid black;
-    width: fit-content;
-    padding: 10px;
-    border-radius: 5px;
-}
-.red{
+.offline{
     color: red;
     
 }
-.green{
+.online{
     color:green;
 }
